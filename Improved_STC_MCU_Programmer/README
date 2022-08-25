@@ -1,0 +1,19 @@
+This is an automatic programmer for STC MCU with a few interesting
+enhancement compared to the "STC Auto Programmer" available on 
+AliExpress:
+
+- Added a RESET push button to allow for manual power cycling of
+the target MCU.
+
+- Added a slide switch to select the target MCU's supply voltage.
+
+- Added a Schottky diode on TxD to prevent parasite powering of 
+the target MCU.
+
+- Used a USB B socket instead of a USB A plug to allow placing the
+target MCU further away from the computer, and to leave room for 
+other USB devices on adjacent USB ports of the computer.
+
+This programmer uses a CH340N, which only has RTS# (no DTR#), so
+you'll need to use stcgal-patched's -A rts option in addition to
+-a to automatically power cycle the target MCU.
