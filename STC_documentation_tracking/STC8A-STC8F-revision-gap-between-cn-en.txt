@@ -1,0 +1,65 @@
+2022/9/20
+
+1. Update the selection price list
+2. Update the official website
+3. Added STC-ISP advanced application chapter
+4. Added the description section of closing the driver's mandatory digital signature
+
+2021/8/26
+
+1. Correct the comment error in the ADC chapter example program
+
+2021/6/26
+
+1. Revise the formula for calculating the enhanced PWM output frequency
+
+2021/5/10
+
+1. Add the description of ADC power switch delay
+2. Add the principle description and calculation formula of using ADC 15th channel to reverse the input voltage of external channel
+3. Modify the error description of the maximum available FLASH size for some series
+4. Add related instructions for timer 2/3/4 interrupt flag bits
+
+2021/3/8
+
+1. Added the description of STC8C2K64S4-44Pin/32Pin series
+2. Added STC8A8K64D4-64Pin/48Pin series new product introduction
+3. Added STC8 series naming tidbits in the appendix
+
+2021/2/26
+
+1. Added description about simulating USB download
+
+2021/2/4
+
+1. Correct the reset initial value of the CLKDIV register
+2. Add the description of the initial value of the special function register
+3. Correct the reset initial value of P6M1/P7M1
+4. Add the application reference circuit diagram under the pin diagram
+
+2020/12/4
+
+1. Correct the description errors in the documentation
+2. Add serial port to LIN bus example program
+
+2020/11/20
+
+1. Correct the errors in some sample programs
+2. Fixed the register table error in the Enhanced PWM chapter
+3. Add the package dimension drawing of LQFP44
+4. Correct the reset initial value of some special function registers in the I/O port chapter
+
+2020/10/16
+
+1. Add the description of the load capacitance of the external crystal oscillator circuit
+
+2020/9/23
+
+2. Added I/O description at the beginning of timer, serial port, SPI, PCA, PWM chapters
+3. Update STC8A series application notes
+
+2020/9/4
+
+4. Update STC8A series application notes
+5. Added special notes to ADC chapter
+6. Modify the ADC conversion speed calculation formula

@@ -1,0 +1,109 @@
+附录W 更新记录
+Appendix W. Revision history -------------------------------------------
+
+2023/1/10
+
+1. Add forum links
+2. Added an example of system clock frequency division output in the 
+Enhanced PWM chapter
+3. Update the description of the reference circuit diagram
+
+2022/12/23
+
+1. Update the I2C slave code sample program (to improve code compatibility)
+
+2022/11/14
+
+1. It is recommended to use the combination of 22uF+0.1uF(104) for the 
+capacitors in the ISP download reference circuit diagram
+
+2022/10/31
+
+1. Add the reference circuit diagram for ISP download using the STC-USB 
+Link1D tool
+2. Add the reference circuit diagram of software simulating USB for ISP 
+download
+
+2022/9/20
+
+1. Correct typos in documents
+2. Update the selection price list
+3. Update the official website
+4. Add STC-ISP advanced application chapter
+5. Added the chapter about closing the mandatory digital signature of the driver
+
+2022/9/2
+
+1. Correct the error of declaring the variable position in the sample program
+
+2022/8/4
+
+1. Correct the STC8A8K64D4 pin diagram (P2.0 removes the RSTSV function)
+2. Correct typos in the comparator chapter
+
+2022/3/9
+
+1. Correct typos in documents
+
+2022/2/18
+
+1. Correct typos in documents
+2. Correct the description error of ADC data structure in the DMA chapter
+
+2021/12/17
+1. Change the reset pin name to NRST in all pin diagrams
+2. Correct the timing calculation formula of timer 2/3/4
+
+2021/11/30
+
+1. Correct typos in the document
+2. All BMMs are renamed as DMA
+3. Add EEPROM application sample program
+4. Update the selection price list
+5. Add the package size drawing of LQFP44
+6. Add detailed instructions for the read-only SFR (CHIPID)
+7. Add the appendix "STC Simulation User Manual" chapter
+
+2021/10/6
+
+1. Modify some chapter titles
+2. Correct typos found in the document
+3. Updated the port switching table for 8-bit data and 16-bit data in 
+the LCM chapter
+4. Add the external interrupt description in the interrupt source table 
+in the interrupt system chapter
+5. Use the new version software to take screenshots in the emulator 
+chapter of the appendix
+6. Add the chapter "How to test the I/O port" in the appendix
+
+September 26, 2021
+
+1. Update some descriptions in the features and price list
+2. Update technical support phone number
+3. Add sample programs for serial port DMA timeout processing and data 
+verification
+4. Added notes on the use of zero-return interrupts in the Enhanced PWM 
+chapter
+
+2021/8/26
+
+1. Correct the comment error in the sample program of the ADC chapter
+
+2021/6/29
+
+1. Add LQFP44 pin diagram
+
+2021/6/26
+
+1. Correct the wrong description in the comparator structure diagram
+2. Revise the calculation formula of enhanced PWM output frequency
+
+2021/5/10
+
+1. Add the description of timer 2/3/4 interrupt flag bits
+2. Correct the DMA read trigger control bit of serial port 1/2/3/4
+
+2021/4/28
+
+1. Create STC8A8K64D4 series microcontroller technical reference manual 
+document

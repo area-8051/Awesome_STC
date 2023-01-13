@@ -1,0 +1,80 @@
+附录V STC8A8K64D4 系列单片机取 代STC8A8K64S4A12 系列的注意事项
+Appendix V. STC8A8K64S4A12 to STC8A8K64D4 migration guide ==============
+
+I/O ports
+
+After the STC8A8K64D4 series MCU is powered on, the I/O mode is different 
+from that of the STC8A8K64S4A12 series. All the I/O ports of STC8A8K64S4A12 
+series single-chip microcomputer are 8051 quasi-bidirectional port mode 
+after power-on, and among the I/O ports of STC8A8K64D4 series single-chip 
+microcomputer, except ISP download pin P3.0/P3.1 is quasi-bidirectional 
+port mode, all other All I/O ports are in high-impedance input mode after 
+power-on. After the traditional 8051 single-chip microcomputer is powered 
+on, it will be in quasi-bidirectional port mode and output high level. 
+There are often customers who use I/O to drive motors or LED lights in 
+their systems. blink. The I/O of the STC8A8K64D4 series is in high-impedance 
+input mode after power-on, which can avoid such malfunctions of motors and LEDs.
+
+Because of the I/O of the STC8A8K64D4 series single-chip microcomputer, 
+except the ISP download pin P3. Before the I/O port of STC8A8K64D4 series 
+outputs signals, the working mode of I/O must be set using two registers, 
+PxM0 and PxM1.
+
+Reset pin
+
+The P5.4 port of STC8A8K64D4 series and STC8A8K64S4A12 series is generally 
+used as an ordinary I/O port. When the user sets P5.4 as the reset pin 
+function during ISP download, the P5.4 port is the reset pin of the single 
+chip microcomputer. For the STC8A8K64S4A12 series, the microcontroller is 
+in the reset state when the reset pin is at a high level, and the 
+microcontroller is released from the reset state when it is at a low level. 
+The reset level of the STC8A8K64D4 series and the STC8A8K64S4A12 series is 
+reversed, that is, for the STC8A8K64D4 series, when the reset pin is at a 
+low level, the microcontroller is in the reset state, and when it is at a 
+high level, the microcontroller is released from the reset state.
+
+Therefore, when the user enables the reset pin function of the P5.4 port, 
+it is necessary to pay attention to the problem of the reset level.
+
+EEPROM
+
+The waiting time of EEPROM erasing and programming of STC8A8K64S4A12 series 
+is set by Bit2-Bit0 of register IAP_CONTR, which is only an approximate 
+frequency range value. STC8A8K64D4 series adds a new register IAP_TPS 
+(SFR address: 0F5H), which is specially used to set EEPROM erasing and 
+programming, and the user does not need to calculate, just fill in IAP_TPS 
+directly according to the current CPU operating frequency, and the hardware 
+will automatically calculate the waiting time. (For example: if the current 
+CPU operating frequency is 24MHz, you only need to fill in 24 to IAP_TPS)
+
+ADC
+
+The ADC of the STC8A8K64D4 series is fully functionally compatible with 
+the STC8A8K64S4A12 series. Based on the STC8A8K64S4A12 series ADC, the 
+STC8A8K64D4 series has added new functions such as external trigger 
+function and automatic multiple conversion averaging.
+
+Comparators
+
+The comparator positive input of STC8A8K64D4 series is 4 optional, and 
+the negative input is two optional, and the input selection is set in 
+the register CMPEXCFG. The STC8A8K64S4A12 series is inconsistent.
+
+SPI
+
+The four SPI clock frequencies of the STC8A8K64D4 series are: SYSclk/4, 
+SYSclk/8, SYSclk/16 and SYSclk/2. The four SPI clock frequencies of 
+STC8A8K64S4A12 series are: SYSclk/4, SYSclk/8, SYSclk/16 and SYSclk/32.
+
+PCA/CCP/PWM
+
+Among the PCA-related SFRs of the STC8A8K64D4 series, the SFRs of the 
+first three groups of modules are the same as those of the STC8A8K64S4A12 
+series, and the control registers of the fourth group of modules 
+(PCA3/CCP3/PWM3) are in the XFR area, which is not compatible with the 
+STC8A8K64S4A12 series. (specifically CCAPM3, CCAP3L, CCAP3H, and PCA_PWM3)
+
+15-bit Enhanced PWM
+
+The enhanced PWM related SFR address of STC8A8K64D4 series is not 
+compatible with STC8A8K64S4A12 series.

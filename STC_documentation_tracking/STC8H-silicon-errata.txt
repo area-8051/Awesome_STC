@@ -1,0 +1,94 @@
+附录V 应用注意事项
+Appendix V. Recommendations for use ------------------------------------
+
+Notes on STC8H series I/O ports
+
+1. Except for the ISP download ports P3.0 and P3.1 of the I/O ports of 
+the STC8H series chip, the initial modes of the other I/O ports after 
+power-on are high-impedance input mode, the user cannot directly output 
+the level, so the user initializes the program in the program. Where 
+the corresponding I/O mode must be initialized with the PxM0 and PxM1 
+registers, it can be used normally.
+
+2. All I/O ports of STC8H series chips can be set to quasi-bidirectional 
+port mode, strong push-pull output mode, open-drain output mode or 
+high-impedance input mode. In addition, each I/O can be independently 
+enabled on the internal 4K port pull-up resistor.
+
+3. The STC8H series chip will not automatically set the I/O port mode 
+for special I/O, such as ADC port, serial port, I2C port and SPI port, 
+the user must set the corresponding port to the appropriate mode.
+
+4. If the P5.4 pin is enabled as a reset pin, the reset level is low 
+level.
+
+5. Special attention: Since all I/Os of STC8H series (except ISP 
+download port P3.0/P3.1) are in high-impedance input mode after 
+power-on, the external level of I/O is not fixed. Entering power-down 
+mode/stop mode will cause extra power consumption of I/O. Before MCU 
+enters power-down mode/stop mode, all I/O ports must be set to the I/O 
+port mode according to the actual situation. All unused external 
+floating I/Os need to be set as quasi-bidirectional ports and output 
+high level fixedly. Especially for chips with some pins, since some 
+I/O ports inside the chip are not wired to external pins, these I/Os 
+are also in a floating state, and these I/Os also need to be set as 
+quasi-bidirectional ports and fixed output high level.
+
+STC8H8K64U series
+
+1. For the B version chip of STC8H8K64U, the RTC cannot use the 
+internal 32K as the clock source.
+
+2. For the B version chip of STC8H8K64U, the comparator cannot select 
+the ADC channel as the positive input.
+
+3. The B version chip of STC8H8K64U will consume about 3uA after 
+entering the power saving mode.
+
+For the above 3 problems, the C version of STC8H8K64U will all be 
+modified correctly.
+
+STC8H3K64S2/S4 series
+
+1. STC8H3K64S4 and STC8H3K64S2 series B-version chip I/O interrupts 
+have been tested and found to be problematic, please do not use them 
+temporarily. (This problem, the C version of the chip will be modified 
+correctly).
+
+2. The internal IRC of the B version chips of the STC8H3K64S4 and 
+STC8H3K64S2 series, 32M～37M may be the dead zone, please do not 
+select the frequency of this frequency example.
+
+STC8H4K64TLR series
+
+1. When the clock source of the RTC selects an external 32.768K crystal 
+oscillator, the digital channels of the crystal oscillator connected to 
+pins P1.6 and P1.7 need to be turned off, otherwise there will be 
+additional leakage after entering the STOP mode. (Set both bits 6 and 7 
+of register P1IE to 0 to turn off the digital channels of P1.6 and P1.7).
+
+STC8H2K64T series
+
+1. For STC8H2K64T series A chip, when setting the I/O port interrupt 
+enable bit register P0INTE, P1INTE, P5INTE of P0, P1, P5 port, it will 
+affect the digital input enable register P0IE, P1IE, P5IE of P0, P1, P5.
+
+2. When testing the ADC function of the A chip of the STC8H2K64T series, 
+do not set the P0IE, P1IE and P5IE registers, because the settings are 
+invalid.
+
+3. The RTC function of version A chip of STC8H2K64T series needs to be 
+improved, please do not use it.
+
+4. Special attention: because all I/Os of STC8H series (except ISP 
+download port P3.0/P3.1) are high-impedance inputs after power-on 
+mode, the external level of I/O is not fixed, if the MCU enters 
+the power-down mode/stop mode directly, it will cause extra power 
+consumption of the I/O, so before the MCU enters the power-down 
+mode/stop mode, all the I/O ports are all set according to the actual 
+situation. For all unused external floating I/Os, they need to be set 
+as quasi-bidirectional ports and fixed output high level. Especially 
+for chips with some pins, since some I/O ports inside the chip are not 
+wired to external pins, these I/Os are also in a floating state, and 
+these I/Os also need to be set as quasi-bidirectional ports and fixed 
+output high level.

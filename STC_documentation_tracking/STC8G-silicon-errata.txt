@@ -1,0 +1,141 @@
+附录S 应用注意事项
+Appendix S. Recommendations for use ------------------------------------
+
+STC8G1K08A series
+
+The STC8G1K08A series is currently mass-produced with version B chips, 
+and there is no problem, please use it with confidence.
+
+The shutdown interrupt instruction of PCA interrupt of STC8G1K08A series 
+A-version chips cannot be completed within one clock, and the user must 
+add one more NOP instruction after the shutdown interrupt instruction. 
+(Since enabling or disabling the EA total interrupt can take effect 
+within one clock, if the user needs to shield the interrupt immediately, 
+the method of closing the EA can be used). This problem does not affect 
+the normal use of the chip.
+
+Special attention: Since all I/Os of STC8G series (except ISP download 
+port P3.0/P3.1) are in high-impedance input mode after power-on, the 
+external level of I/O is not fixed. Entering the power-down mode/stop 
+mode will cause extra power consumption of I/O. Before the MCU enters 
+the power-down mode/stop mode, all I/O ports must be set to the I/O 
+port mode according to the actual situation. , For all unused external 
+floating I/Os, it needs to be set as a quasi-bidirectional port, and 
+fixed output high level. Especially for chips with some pins, since 
+some I/O ports inside the chip are not wired to external pins, these 
+I/Os are also in a floating state, and these I/Os also need to be set 
+as quasi-bidirectional ports and fixed output high level.
+
+STC8G2K64S4/S2 series
+
+STC8G2K64S4/S2 series currently mass-produced C version chips, except 
+that the PCA interrupt shutdown interrupt instruction cannot be completed 
+in one clock, other known problems of A version and B version have all 
+been corrected correctly.
+
+For the STC8G2K64S4/S2 series currently mass-produced version B chips, 
+the PCA pulse output problem and the P2.0/P2.1 port output PWM waveform 
+problem have been corrected correctly.
+
+STC8G2K64S4/S2 series currently mass-produced version B chips of PCA 
+interrupt close interrupt instruction cannot be completed within one 
+clock, the user must add one more NOP instruction after closing interrupt 
+instruction. (Since enabling or disabling the EA total interrupt can take 
+effect within one clock, if the user needs to shield the interrupt 
+immediately, the method of closing the EA can be used). This problem does 
+not affect the normal use of the chip.
+
+STC8G2K64S4/S2 series currently mass-produced version B chips, when the 
+P0.5 port is enabled to output PWM waveform, when an external exception 
+occurs, the P0.5 port output will be terminated immediately, but the 
+hardware does not set the P0.5 port to High-impedance input state, but 
+switch to the pull-up bidirectional port mode. Therefore, if there is a 
+need to enable the PWM output function of the P0.5 port in the project, 
+please note that the P0.5 port can still output a current of 20~30uA 
+when an abnormality occurs.
+
+The STC8G2K64S4/S2 series are currently mass-produced version B chips. 
+After power-on, the initial value of the level transition speed control 
+register of all ports is 00H, that is, the default is fast transition 
+speed after power-on. Different from other series, the level of other 
+series The initial value of the conversion speed control register is 
+FFH, that is, the default is the slow flip speed after power-on.
+
+STC8G2K64S4/S2 series currently mass-produced version B chips, when the 
+enhanced PWM output waveform needs to be used, the CPU cannot enter the 
+power saving mode, neither IDLE mode/standby mode nor STOP mode/stop mode.
+
+The PCA high-speed pulse output function of the STC8G2K64S4/S2 series 
+A-version chips will be affected by the flip of the same group of I/O 
+ports. For details, please refer to the reference code of the STC8G1K08 
+series in this section.
+
+The enhanced PWM function of the STC8G2K64S4/S2 series A-version chips 
+has a bug in the P2.0 and P2.1 ports. The other 43 I/O ports can output 
+the PWM waveform correctly. It is recommended not to use the P2.0 and 
+P2.1 outputs PWM waveform.
+
+The shutdown interrupt instruction of PCA interrupt of STC8G2K64S4/S2 
+series A-version chips cannot be completed within one clock, and the 
+user must add one more NOP instruction after the shutdown interrupt 
+instruction. (Since enabling or disabling the EA total interrupt can 
+take effect within one clock, if the user needs to shield the interrupt 
+immediately, the method of closing the EA can be used). This problem 
+does not affect the normal use of the chip.
+
+Special attention: Since all I/Os of STC8G series (except ISP download 
+port P3.0/P3.1) are in high-impedance input mode after power-on, the 
+external level of I/O is not fixed. Entering the power-down mode/stop 
+mode will cause extra power consumption of I/O. Before the MCU enters 
+the power-down mode/stop mode, all I/O ports must be set to the I/O 
+port mode according to the actual situation. , For all unused external 
+floating I/Os, it needs to be set as a quasi-bidirectional port, and 
+fixed output high level. Especially for chips with some pins, since 
+some I/O ports inside the chip are not wired to external pins, these 
+I/Os are also in a floating state, and these I/Os also need to be set 
+as quasi-bidirectional ports. And fixed output high level.
+
+STC8G1K08 series
+
+The close interrupt instruction of LVD interrupt, timer 2 interrupt, 
+INT2 interrupt, INT3 interrupt and INT4 interrupt of STC8G1K08 series C 
+version chip and D version chip cannot be completed in one clock, the 
+user must add one more NOP instruction after the close interrupt 
+instruction. (The D version chip has modified the problem that the 
+high-speed pulse output will be affected by the flip of the same group 
+of I/O ports on the basis of the C version chip.)
+
+The PCA high-speed pulse output function of the STC8G1K08 series C 
+version chip will be affected by the flip of the same group of I/O 
+ports. Influence, it is recommended not to use the high-speed pulse 
+output function (D version chip does not have this problem).
+
+Special attention: Since all I/Os of STC8G series (except ISP download 
+port P3.0/P3.1) are in high-impedance input mode after power-on, the 
+external level of I/O is not fixed. Entering the power-down mode/stop 
+mode will cause extra power consumption of I/O. Before the MCU enters 
+the power-down mode/stop mode, all I/O ports must be set to the I/O 
+port mode according to the actual situation. , For all unused external 
+floating I/Os, it needs to be set as a quasi-bidirectional port, and 
+fixed output high level. Especially for chips with some pins, since 
+some I/O ports inside the chip are not wired to external pins, these 
+I/Os are also in a floating state, and these I/Os also need to be set 
+as quasi-bidirectional ports and fixed output high level.
+
+STC8G1K08T series
+
+STC8G1K08T series B version chips are already in sample delivery, 
+please stop using A version chips and use B version chips for testing.
+
+Special attention: Since all I/Os of the STC8G series (except the ISP 
+download port P3.0/P3.1) are in high-impedance input mode after 
+power-on, the external level of the I/O is not fixed. At this time, 
+if the MCU directly Entering power-down mode/shutdown mode will cause 
+I/O to consume extra power. Before the MCU enters power-down 
+mode/shutdown mode, all I/O ports must be set according to the actual 
+situation. , for all unused external floating I/Os, they need to be 
+set as quasi-bidirectional ports, and fixed output high level. 
+Especially for chips with some pins, since some I/O ports inside the 
+chip are not wired to external pins, these I/Os are also in a floating 
+state, and these I/Os also need to be set as quasi-bidirectional ports 
+and fixed output high level.
