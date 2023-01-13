@@ -10,9 +10,9 @@ the target MCU.
 - Added a Schottky diode on TxD to prevent parasite powering of 
 the target MCU.
 
-- Used a USB B socket instead of a USB A plug to allow placing the
-target MCU further away from the computer, and to leave room for 
-other USB devices on adjacent USB ports of the computer.
+- Used a USB B socket instead of a USB A plug so the programmer
+can be placed further away from the computer, and to leave room
+to connect other USB devices on adjacent USB ports of the computer.
 
 This programmer uses a CH340N, which only has RTS# (no DTR#), so
 you'll need to use stcgal-patched's -A rts option in addition to
