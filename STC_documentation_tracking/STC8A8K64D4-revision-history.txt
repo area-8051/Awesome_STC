@@ -1,6 +1,11 @@
 附录W 更新记录
 Appendix W. Revision history -------------------------------------------
 
+2023/1/17
+
+1. Add the chapter "Using STC to kill two birds with one stone: USB to 
+dual serial ports to simulate STC8 series MCU" (section 5.2)
+
 2023/1/10
 
 1. Add forum links
