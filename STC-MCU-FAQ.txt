@@ -56,18 +56,58 @@ of STC's MCU.
 
 -- Where can I find documentation? -------------------------------------
 
-SDCC: https://sdcc.sourceforge.net/doc/sdccman.pdf
+SDCC:
 
-STC8G: http://www.stcmcudata.com/STC8F-datasheet/STC8G-en.pdf
+https://sdcc.sourceforge.net/doc/sdccman.pdf
 
-STC8H: http://www.stcmcudata.com/STC8F-datasheet/STC8H-en.pdf
+Chinese versions of MCU datasheets:
+
+http://www.stcmcudata.com/STC8F-datasheet/STC8H.pdf
+http://www.stcmcudata.com/STC8F-datasheet/STC8G.pdf
+http://www.stcmcudata.com/STC8F-datasheet/STC8A-STC8F.pdf
+http://www.stcmcudata.com/datasheet/stc/stc-ad-pdf/STC15.pdf
+http://www.stcmcudata.com/datasheet/stc/stc-ad-pdf/STC12C5A60S2.pdf
+
+English versions of MCU datasheets:
+
+http://www.stcmcudata.com/STC8F-datasheet/STC8H-en.pdf
+http://www.stcmcudata.com/STC8F-datasheet/STC8G-en.pdf
+http://www.stcmcudata.com/STC8F-datasheet/STC8A-STC8F-en.pdf
+http://www.stcmcudata.com/datasheet/stc/stc-ad-pdf/STC15-english.pdf
+http://www.stcmcudata.com/datasheet/stc/stc-ad-pdf/STC12C5A60S2-english.pdf
+
+Chinese-only datasheet:
+
+http://www.stcmcudata.com/STC8F-datasheet/STC8A8K64D4.pdf
 
 You can check the following page for documentation updates:
+
 http://www.stcmcudata.com/website-update.txt
 
 -- Where can I buy STC MCU? --------------------------------------------
 
 https://www.lcsc.com/products/Microcontroller-Units-MCUs-MPUs-SOCs_11329.html?keyword=STC8H
+
+-- Why don't you cover the STC32G MCU? ---------------------------------
+
+The STC32G is an MCS-251 MCU, with a different programming model, and is
+not supported by SDCC.
+
+Furthermore, there is no point in using an STC32G when 32-bit RISC-V MCU
+are available at the same price point or less. While there definitely are 
+use cases for 8-bit MCS-51 MCU, I can't see any reason to use the STC32G.
+
+If you're interested, WCH makes very interesting RISC-V MCU, the CH32V 
+series and the CH582. See http://wch-ic.com/ for technical information. 
+Development boards are available from several AliExpress stores:
+
+https://wchofficialstore.aliexpress.com/store/1100367542
+https://miusecntech-muselab.aliexpress.com/store/5940159
+https://weactstudio.aliexpress.com/store/910567080
+https://vcc-gnd.aliexpress.com/store/5881833
+
+They also offer an Eclipse-based IDE supporting all their chips, which
+can help you getting started quickly: http://www.mounriver.com/
 
 -- What are the differences between the STC8H8K64U and the STC8A8K64D4?
 
@@ -79,3 +119,6 @@ They are almost identical:
    PWM    | Advanced 16-bit | Enhanced 15-bit
    USB    | Yes             | No
    RTC    | Yes             | No
+
+Unless you want to migrate an application developped for an STC8G MCU or
+the STC8A8K64S4A12, there are little reasons to use the STC8A8K64D4.
