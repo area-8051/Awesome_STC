@@ -88,6 +88,17 @@ http://www.stcmcudata.com/website-update.txt
 
 https://www.lcsc.com/products/Microcontroller-Units-MCUs-MPUs-SOCs_11329.html?keyword=STC8H
 
+It is also possible to order directly from STC, the updated price list
+is available at: http://www.stcmcudata.com/stc-mcu-select.txt
+
+Being a text file, it will not display correctly in a browser, so it is 
+better downloaded with a command such as:
+
+wget -q --remote-encoding=GB18030 http://www.stcmcudata.com/stc-mcu-select.txt
+
+It's interesting for orders of CNY 3000 and above (around USD/EUR 450), 
+or if you need parts not available from LCSC yet.
+
 -- Why don't you cover the STC32G MCU? ---------------------------------
 
 The STC32G is an MCS-251 MCU, with a different programming model, and is
