@@ -1,6 +1,13 @@
 附录II 更新记录
 Appendix II. Revision history ------------------------------------------
 
+2023/1/31
+
+1. Update the reference value of the capacitance of the UCap pin in the USB reference circuit diagram
+2. Update the high-precision ADC reference circuit diagram in the ADC chapter
+3. In the RTC chapter, add a reference example of downloading and maintaining RTC parameters without power failure
+4. Add USB-CDC virtual serial port description chapter
+
 2023/1/17
 
 1. Add the chapter "Using STC to kill two birds with one stone: USB to 
