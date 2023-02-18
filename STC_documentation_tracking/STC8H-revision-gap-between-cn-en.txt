@@ -1,6 +1,11 @@
 附录II 更新记录
 Appendix II. Revision history ------------------------------------------
 
+2023/2/16
+
+1. STC8H1K28 series adds TSSOP20 pin diagram
+2. Update the selection price list
+
 2023/1/31
 
 1. Update the reference value of the capacitance of the UCap pin in the USB reference circuit diagram

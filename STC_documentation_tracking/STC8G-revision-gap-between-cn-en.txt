@@ -1,6 +1,11 @@
 附录AA 更新记录
 Appendix AA. Revision history ------------------------------------------
 
+2023/2/16
+
+1. STC15H2K series add SOP28 package
+2. Update the selection price list
+
 2023/1/17
 
 1. Add the chapter "Using STC to kill two birds with one stone: USB to 
