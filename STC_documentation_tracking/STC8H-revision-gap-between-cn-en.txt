@@ -1,6 +1,12 @@
 附录II 更新记录
 Appendix II. Revision history ------------------------------------------
 
+2023/3/16
+
+1. Selection price list of smaller models
+2. STC8H1K08 series adds SOP20 and SOP16 pin diagrams
+3. Added the package size of SOP20 in the package size diagram chapter
+
 2023/3/1
 
 1. The RTC chapter adds an example of "internal RTC clock low power sleep wake-up comparator voltage detection program"
