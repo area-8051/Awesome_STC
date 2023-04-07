@@ -1,6 +1,11 @@
 附录II 更新记录
 Appendix II. Revision history ------------------------------------------
 
+2023/4/7
+
+1. Update the impedance matching resistor value on D+/D- in the USB reference circuit
+2. Reorganize the reference circuit in the pin diagram
+
 2023/3/16
 
 1. Selection price list of smaller models
