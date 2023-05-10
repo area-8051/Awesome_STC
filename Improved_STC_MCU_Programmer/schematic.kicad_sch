@@ -1718,7 +1718,7 @@
     (property "Reference" "D2" (at 237.49 112.7125 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "Blue" (at 237.49 110.1725 90)
+    (property "Value" "Red" (at 237.49 110.1725 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 233.68 110.49 0)
