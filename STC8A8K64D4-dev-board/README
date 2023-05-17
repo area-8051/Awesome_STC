@@ -1,0 +1,34 @@
+A nice development board equiped with the STC8A8K64D4 can be found on
+AliExpress around EUR 10 from these stores: 
+
+https://www.aliexpress.com/item/1005005402019740.html
+https://www.aliexpress.com/item/1005005526009405.html
+https://www.aliexpress.com/item/1005005573719427.html
+
+The technical reference manual of the STC8H family can be downloaded 
+here: https://www.stcmcudata.com/STC8F-datasheet/STC8A8K64D4.pdf
+It is unfortunately only available in Mandarin Chinese, but the 
+STC8A8K64D4 borrows from the STC8G and STC8H families, which have
+an English documentation:
+
+https://www.stcmcudata.com/STC8F-datasheet/STC8G-en.pdf
+https://www.stcmcudata.com/STC8F-datasheet/STC8H-en.pdf
+
+When in doubt, Google Translate is really helpful. :)
+
+The seller can provide you with the board's schematic as a PDF file, 
+but with annotations in Mandarin Chinese. I have translated them into 
+English for convenience (STC8A_schematic.pdf).
+
+In addition, I have created 2 files to describe the main components on 
+the board and its jumpers (components+jumpers.pdf), and the functions 
+of its connectors and switches (connectors+switches.pdf).
+
+I have no rights on the schematic itself, but my translation work and 
+the 2 additional PDF files are Copyright (c) 2023 Vincent DEFERT and 
+released under the Creative Commons Attribution 4.0 International License. 
+
+Information about the license can be found at: 
+http://creativecommons.org/licenses/by/4.0/
+
+I wish you long hours of happy hacking with your STC8A8K64D4 board! :)
