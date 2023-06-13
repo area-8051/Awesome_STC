@@ -131,7 +131,7 @@ purpose of interrupting mutually exclusive access to variables.
 Note: The CLR EA instruction itself also has hysteresis, that is, after 
 CLR EA, EA is not closed immediately, but needs to wait for the next 
 clock cycle to complete before EA is closed, that is, after running 
-CLR EA, it is necessary to Execute one more statement before the EA is 
+CLR EA, it is necessary to execute one more statement before the EA is 
 actually closed. Therefore, the correct way to write the program code 
 is to add 1~2 NOP instructions after the CLR EA instruction, because 
 the execution of NOP will not affect any arithmetic logic operation and 
@@ -141,8 +141,7 @@ The correct assembly code to close the EA is as follows:
 
 	...
 	NOP
-	CLR
-	EA
+	CLR EA
 	NOP
 	...
 	NOP

@@ -98,17 +98,17 @@ as quasi-bidirectional ports. And fixed output high level.
 STC8G1K08 series
 
 The close interrupt instruction of LVD interrupt, timer 2 interrupt, 
-INT2 interrupt, INT3 interrupt and INT4 interrupt of STC8G1K08 series C 
-version chip and D version chip cannot be completed in one clock, the 
+INT2 interrupt, INT3 interrupt and INT4 interrupt of STC8G1K08 series 
+version C and version D chips cannot be completed in one clock, the 
 user must add one more NOP instruction after the close interrupt 
-instruction. (The D version chip has modified the problem that the 
+instruction. (The version D chip has modified the problem that the 
 high-speed pulse output will be affected by the flip of the same group 
-of I/O ports on the basis of the C version chip.)
+of I/O ports on the basis of the version C chip.)
 
-The PCA high-speed pulse output function of the STC8G1K08 series C 
-version chip will be affected by the flip of the same group of I/O 
+The PCA high-speed pulse output function of the STC8G1K08 series 
+version C chip will be affected by the flip of the same group of I/O 
 ports. Influence, it is recommended not to use the high-speed pulse 
-output function (D version chip does not have this problem).
+output function (version D chip does not have this problem).
 
 Special attention: Since all I/Os of STC8G series (except ISP download 
 port P3.0/P3.1) are in high-impedance input mode after power-on, the 
@@ -124,8 +124,8 @@ as quasi-bidirectional ports and fixed output high level.
 
 STC8G1K08T series
 
-STC8G1K08T series B version chips are already in sample delivery, 
-please stop using A version chips and use B version chips for testing.
+STC8G1K08T series version B chips are already in sample delivery, 
+please stop using version A chips and use version B chips for testing.
 
 Special attention: Since all I/Os of the STC8G series (except the ISP 
 download port P3.0/P3.1) are in high-impedance input mode after 
