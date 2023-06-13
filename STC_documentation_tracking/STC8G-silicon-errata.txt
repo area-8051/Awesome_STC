@@ -7,7 +7,7 @@ The STC8G1K08A series is currently mass-produced with version B chips,
 and there is no problem, please use it with confidence.
 
 The shutdown interrupt instruction of PCA interrupt of STC8G1K08A series 
-A-version chips cannot be completed within one clock, and the user must 
+version A chips cannot be completed within one clock, and the user must 
 add one more NOP instruction after the shutdown interrupt instruction. 
 (Since enabling or disabling the EA total interrupt can take effect 
 within one clock, if the user needs to shield the interrupt immediately, 
@@ -19,7 +19,7 @@ port P3.0/P3.1) are in high-impedance input mode after power-on, the
 external level of I/O is not fixed. Entering the power-down mode/stop 
 mode will cause extra power consumption of I/O. Before the MCU enters 
 the power-down mode/stop mode, all I/O ports must be set to the I/O 
-port mode according to the actual situation. , For all unused external 
+port mode according to the actual situation. For all unused external 
 floating I/Os, it needs to be set as a quasi-bidirectional port, and 
 fixed output high level. Especially for chips with some pins, since 
 some I/O ports inside the chip are not wired to external pins, these 
@@ -66,17 +66,17 @@ enhanced PWM output waveform needs to be used, the CPU cannot enter the
 power saving mode, neither IDLE mode/standby mode nor STOP mode/stop mode.
 
 The PCA high-speed pulse output function of the STC8G2K64S4/S2 series 
-A-version chips will be affected by the flip of the same group of I/O 
+version A chips will be affected by the flip of the same group of I/O 
 ports. For details, please refer to the reference code of the STC8G1K08 
 series in this section.
 
-The enhanced PWM function of the STC8G2K64S4/S2 series A-version chips 
+The enhanced PWM function of the STC8G2K64S4/S2 series version A chips 
 has a bug in the P2.0 and P2.1 ports. The other 43 I/O ports can output 
 the PWM waveform correctly. It is recommended not to use the P2.0 and 
 P2.1 outputs PWM waveform.
 
 The shutdown interrupt instruction of PCA interrupt of STC8G2K64S4/S2 
-series A-version chips cannot be completed within one clock, and the 
+series version A chips cannot be completed within one clock, and the 
 user must add one more NOP instruction after the shutdown interrupt 
 instruction. (Since enabling or disabling the EA total interrupt can 
 take effect within one clock, if the user needs to shield the interrupt 
@@ -88,7 +88,7 @@ port P3.0/P3.1) are in high-impedance input mode after power-on, the
 external level of I/O is not fixed. Entering the power-down mode/stop 
 mode will cause extra power consumption of I/O. Before the MCU enters 
 the power-down mode/stop mode, all I/O ports must be set to the I/O 
-port mode according to the actual situation. , For all unused external 
+port mode according to the actual situation. For all unused external 
 floating I/Os, it needs to be set as a quasi-bidirectional port, and 
 fixed output high level. Especially for chips with some pins, since 
 some I/O ports inside the chip are not wired to external pins, these 
@@ -115,7 +115,7 @@ port P3.0/P3.1) are in high-impedance input mode after power-on, the
 external level of I/O is not fixed. Entering the power-down mode/stop 
 mode will cause extra power consumption of I/O. Before the MCU enters 
 the power-down mode/stop mode, all I/O ports must be set to the I/O 
-port mode according to the actual situation. , For all unused external 
+port mode according to the actual situation. For all unused external 
 floating I/Os, it needs to be set as a quasi-bidirectional port, and 
 fixed output high level. Especially for chips with some pins, since 
 some I/O ports inside the chip are not wired to external pins, these 
@@ -133,7 +133,7 @@ power-on, the external level of the I/O is not fixed. At this time,
 if the MCU directly Entering power-down mode/shutdown mode will cause 
 I/O to consume extra power. Before the MCU enters power-down 
 mode/shutdown mode, all I/O ports must be set according to the actual 
-situation. , for all unused external floating I/Os, they need to be 
+situation. For all unused external floating I/Os, they need to be 
 set as quasi-bidirectional ports, and fixed output high level. 
 Especially for chips with some pins, since some I/O ports inside the 
 chip are not wired to external pins, these I/Os are also in a floating 
