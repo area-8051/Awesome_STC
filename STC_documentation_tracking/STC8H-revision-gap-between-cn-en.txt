@@ -1,6 +1,16 @@
 附录II 更新记录
 Appendix II. Revision history ------------------------------------------
 
+2023/6/14
+
+1. Correct the typos in the document
+2. Update the selection price list
+3. Add STC8H8K64U series SKDIP28 pin diagram
+
+2023/4/26
+
+1. Update the example in the RTC chapter, and use an external 32768 crystal oscillator by default
+
 2023/4/19
 
 1. Update the selection price list of some models
