@@ -1,6 +1,22 @@
 附录II 更新记录
 Appendix II. Revision history ------------------------------------------
 
+2023/7/18
+
+1. In the overview chapter, the basic knowledge of single-chip microcomputer is added
+2. Adjust the reference circuit diagram so that the circuit diagram and related explanatory text are on the same page
+3. Added the ISP download flow chart in the chapter of download reference circuit diagram
+4. Add RS485 reference download circuit diagram in the chapter of download reference circuit diagram
+5. The instruction system chapter adds a description of the assembly addressing mode and a detailed explanation of the instructions
+6. I/O chapter adds STC-ISP download software I/O configuration tool instruction
+7. Added STC-ISP download software timer calculator tool instructions in the timer chapter
+8. Added STC-ISP download software serial port baud rate calculator tool and serial port assistant instructions in the serial port chapter
+
+2023/7/14
+
+1. Correct the typos in the document
+2. Add the reference circuit diagram for ISP download using "STC USB-2UART"
+
 2023/6/14
 
 1. Correct the typos in the document
