@@ -1,5 +1,9 @@
-附录II 更新记录
-Appendix II. Revision history ------------------------------------------
+附录HH 更新记录
+Appendix HH. Revision history ------------------------------------------
+
+2023/7/24
+
+1. Add the reference circuit diagram for RS485 and RS232 communication and download using USB to dual serial port chip
 
 2023/7/18
 
