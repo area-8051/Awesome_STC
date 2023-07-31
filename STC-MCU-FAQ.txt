@@ -20,15 +20,8 @@ However, as the flashing procedure involves power cycling the MCU,
 you may want to buy an "STC Auto Programmer" from AliExpress for 
 a couple of dollars/euros to make it even easier.
 
-Read the Using_an_STC_Auto_Programmer_with_STCGAL.pdf document in this
-repository for more information.
-
-The automatic programmer described in the folder below has the advantage
-that it can be used both as a programmer and an USB-to-serial adapter, 
-which STC Auto Programmer cannot (due to its use of DTR instead of RTS), 
-but you have to build it yourself:
-
-https://github.com/area-8051/tips-and-tricks/tree/master/Improved_STC_MCU_Programmer
+Please read the Using_an_STC_Auto_Programmer_with_STCGAL.pdf document
+in this repository for more information and purchase links.
 
 -- Which STC MCU should I use? -----------------------------------------
 
