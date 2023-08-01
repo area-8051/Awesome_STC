@@ -1,6 +1,12 @@
 附录HH 更新记录
 Appendix HH. Revision history ------------------------------------------
 
+2023/7/31
+
+1. Update electrical characteristic parameters
+2. Update the maximum operating frequency and operating temperature of STC8H series chips
+3. Partially downloaded software demonstration screenshots use the latest V6.92A version of the software to take screenshots
+
 2023/7/25
 
 1. STC8H8K64U series add internal structure diagram
