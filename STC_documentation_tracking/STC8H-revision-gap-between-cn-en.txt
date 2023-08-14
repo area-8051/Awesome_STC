@@ -1,6 +1,10 @@
 附录HH 更新记录
 Appendix HH. Revision history ------------------------------------------
 
+2023/8/11
+
+1. Correct the reference capacitance value of the external crystal oscillator matching capacitor
+
 2023/7/31
 
 1. Update electrical characteristic parameters
