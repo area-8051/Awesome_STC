@@ -1,5 +1,5 @@
-附录V 应用注意事项
-Appendix V. Recommendations for use ------------------------------------
+附录U 应用注意事项
+Appendix U. Recommendations for use ------------------------------------
 
 Notes on STC8H series I/O ports
 
@@ -36,28 +36,24 @@ quasi-bidirectional ports and fixed output high level.
 
 STC8H8K64U series
 
-1. For the B version chip of STC8H8K64U, the RTC cannot use the 
-internal 32K as the clock source.
+1. Version A of STC8H8K64U has no RTC function.
 
-2. For the B version chip of STC8H8K64U, the comparator cannot select 
-the ADC channel as the positive input.
+2. In version B, the RTC cannot use the internal 32K as the clock source.
 
-3. The B version chip of STC8H8K64U will consume about 3uA after 
-entering the power saving mode.
+3. In version B, the comparator cannot select the ADC channel as the positive input.
 
-For the above 3 problems, the C version of STC8H8K64U will all be 
-modified correctly.
+4. Version B will consume about 3uA after entering the power saving mode.
+
+The 3 problems above are fiexd in version C.
 
 STC8H3K64S2/S4 series
 
-1. STC8H3K64S4 and STC8H3K64S2 series B-version chip I/O interrupts 
-have been tested and found to be problematic, please do not use them 
-temporarily. (This problem, the C version of the chip will be modified 
-correctly).
+1. In STC8H3K64S4 and STC8H3K64S2 version B, I/O interrupts have been 
+tested and found to be problematic, please do not use them temporarily. 
+This problem is fixed in version C.
 
-2. The internal IRC of the B version chips of the STC8H3K64S4 and 
-STC8H3K64S2 series, 32M～37M may be the dead zone, please do not 
-select the frequency of this frequency example.
+2. In version B of the STC8H3K64S4 and STC8H3K64S2, the internal RC
+oscillator may not work when set to operate in the 32～37MHz range.
 
 STC8H4K64TLR series
 
